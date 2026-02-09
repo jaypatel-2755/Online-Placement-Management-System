@@ -22,7 +22,7 @@ This project allows users to manage their income and expenses efficiently with a
 - JDBC
 - MySQL
 - Apache Tomcat
-- HTML5, CSS3
+- HTML, CSS
 
 ---
 
