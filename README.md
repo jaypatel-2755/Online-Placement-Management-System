@@ -1,169 +1,91 @@
+# Expense Tracker Web Application
 
-# 🎓 Online Placement Management System
-
-A **JSP + Servlet + MySQL** based web application for managing student placements.  
-This system allows **Students**, **Admin**, and **Companies** to interact through a centralized portal for placement activities.
+A full-stack Expense Tracker web application built using **Java, JSP, Servlets, and MySQL**.  
+This project allows users to manage their income and expenses efficiently with authentication and reporting features.
 
 ---
 
 ## 🚀 Features
-
-### 👨‍🎓 Student Module
-- Student Registration & Login
-- View Profile
-- Upload Resume
-- Apply for Companies
-- Track Application Status
-
-### 👨‍💼 Admin Module
-- Admin Login
-- Add / Manage Companies
-- View Student Applications
-- Download Student Resumes
-
-### 🏢 Company Module
-- Company details management
-- Job description posting
+- User Registration & Login
+- Session-based Authentication
+- Forgot Password & Reset Password
+- Add Income & Add Expense
+- Monthly Expense Report
+- Logout functionality
+- Secure database connectivity using JDBC
 
 ---
 
 ## 🛠️ Technologies Used
-
-| Technology | Purpose |
-|------------|---------|
-| JSP & Servlet | Backend & frontend logic |
-| MySQL | Database |
-| Apache Tomcat | Server |
-| HTML, CSS | UI Design |
-| JDBC | Database Connectivity |
+- Java (JDK 8+)
+- JSP & Servlets
+- JDBC
+- MySQL
+- Apache Tomcat
+- HTML5, CSS3
 
 ---
 
-## 🗄️ Database Setup (MySQL)
+## 🗂️ Project Modules
+- Authentication Module
+- Expense Management Module
+- Income Management Module
+- Monthly Reporting Module
+- Password Recovery Module
 
-### 1️⃣ Create Database
+---
+
+## ⚙️ Setup Instructions
+
+### 1️⃣ Database Setup
+Create a database in MySQL:
 
 ```sql
-CREATE DATABASE design_engineering_portal;
-USE design_engineering_portal;
+CREATE DATABASE expense_tracker;
+USE expense_tracker;
 ```
 
-### 2️⃣ Required Tables
-
-#### Students Table
+Create table:
 
 ```sql
-CREATE TABLE students (
-    student_id INT AUTO_INCREMENT PRIMARY KEY,
-    enrollment_no VARCHAR(20),
-    full_name VARCHAR(100),
-    email VARCHAR(100),
-    password VARCHAR(100),
-    dob DATE,
-    branch VARCHAR(50),
-    contact VARCHAR(20),
-    gender VARCHAR(10),
-    address TEXT,
-    resume_path TEXT
-);
-```
-
-#### Admins Table
-
-```sql
-CREATE TABLE admins (
-    admin_id INT AUTO_INCREMENT PRIMARY KEY,
+CREATE TABLE users (
+    id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
-    email VARCHAR(100),
+    email VARCHAR(100) UNIQUE,
     password VARCHAR(100)
 );
 ```
 
-#### Companies Table
-
-```sql
-CREATE TABLE companies (
-    company_id INT AUTO_INCREMENT PRIMARY KEY,
-    company_name VARCHAR(150),
-    email VARCHAR(100),
-    job_description TEXT,
-    details TEXT,
-    posted_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
-```
-
-#### Applications Table
-
-```sql
-CREATE TABLE applications (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    student_id INT,
-    company_id INT,
-    enrollment_no VARCHAR(20),
-    application_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    status VARCHAR(50)
-);
-```
-
 ---
 
-## 📁 Important Folder for Resume Uploads
-
-Create this folder manually in your PC:
-
-```
-C:\FinalDesignProjectUploads\resumes\
-```
-
----
-
-## ⚙️ Project Configuration
-
-Update DB connection in servlets:
+### 2️⃣ Configure Database Connection
+Update `DBConnection.java`:
 
 ```java
-DriverManager.getConnection(
- "jdbc:mysql://localhost:3306/design_engineering_portal",
- "root",
- "YOUR_PASSWORD"
-);
+String url = "jdbc:mysql://localhost:3306/expense_tracker";
+String username = "root";
+String password = "root";
 ```
 
 ---
 
-## ▶️ How to Run
-
-1. Install MySQL & create database
-2. Import project into NetBeans/Eclipse
-3. Add project to Apache Tomcat
-4. Start Tomcat
-5. Open in browser:
-
+### 3️⃣ Run Project
+- Import project into **NetBeans / Eclipse**
+- Configure **Apache Tomcat**
+- Run project
+- Open browser:
 ```
-http://localhost:8080/FinalDesignProject/
+http://localhost:8080/ExpenseTracker
 ```
 
 ---
 
-## 🔗 Resume Download Flow
-
-- Resume is stored in:  
-  `C:/FinalDesignProjectUploads/resumes/`
-- DB stores absolute path
-- `DownloadResumeServlet` streams file to browser
+## 👤 Author
+**Jay Patel**
 
 ---
 
-## 🔐 Default Admin Login
+## 📜 License
+This project is for learning and educational purposes.
 
-```
-Email: admin@gmail.com
-Password: admin123
-```
-
----
-
-## 👨‍💻 Author
-
-**Jay**  
-Final Year Engineering Project
+© 2026 Expense Tracker
