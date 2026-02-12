@@ -280,9 +280,7 @@
   </main>
 
   <footer>
-    <p>© 2025 TalentNest. All rights reserved.</p>
-    <p>Government Engineering College, Patan, Gujarat, India</p>
-    <p><a href="mailto:placement@gecpat.ac.in">Contact Us: placement@gecpat.ac.in</a></p>
+    <p>© 2026 TalentNest. All rights reserved.</p>
   </footer>
 </body>
 </html>
