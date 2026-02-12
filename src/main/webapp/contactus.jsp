@@ -245,16 +245,14 @@
     <div class="contact-box">
       <h2>Get in Touch</h2>
       <p>We'd love to hear from you! If you have any questions, feedback, or partnership inquiries, feel free to reach out.</p>
-      <p><strong>Email:</strong> <a href="mailto:placement@gecpat.ac.in">placement@gecpat.ac.in</a></p>
-      <p><strong>Address:</strong> Government Engineering College, Patan, Gujarat, India</p>
+      <p><strong>Email:</strong> <a href="mailto:placement@ldrp.ac.in">placement@ldrp.ac.in</a></p>
+      <p><strong>Address:</strong> LDRP Institute of Technology and Research,KH-5, Sector 15, Gandhinagar, Gujarat, 382015/382016, India</p>
       <p><strong>Phone:</strong> +91 12345 67890</p>
     </div>
   </main>
 
   <footer>
-    <p>© 2025 TalentNest. All rights reserved.</p>
-    <p>Government Engineering College, Patan, Gujarat, India</p>
-    <p><a href="mailto:placement@gecpat.ac.in">Contact Us: placement@gecpat.ac.in</a></p>
+    <p>© 2026 TalentNest. All rights reserved.</p>
   </footer>
 </body>
 </html>
